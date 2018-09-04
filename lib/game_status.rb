@@ -32,7 +32,6 @@ end
 
 def full?(board)
   board_full = board.all?{|cell| board[cell] == "X" || board[cell] == "O"}
-  end
   #x_array = board.select do |cell|
     #cell == "X"
   #end
