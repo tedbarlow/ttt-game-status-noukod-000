@@ -31,14 +31,15 @@ def won?(board)
 end
 
 def full?(board)
-  x_array = board.select do |cell|
-    cell == "X"
+  if board.all?{|cell| cell == "X" || cell == "O"}
   end
-
-  o_array = board.select do |cell|
-    cell == "O"
-  end
-  (x_array + o_array == 9)
+  #x_array = board.select do |cell|
+    #cell == "X"
+  #end
+  #o_array = board.select do |cell|
+    #cell == "O"
+  #end
+  #(x_array + o_array == 9)
 end
 
 def draw?(board)
