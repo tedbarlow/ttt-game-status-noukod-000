@@ -31,7 +31,7 @@ def won?(board)
 end
 
 def full?(board)
-  board_full = board.all?{|cell| board[cell] == "X" || board[cell] == "O"}
+  board_full = board.all?{|cell| cell == "X" || cell == "O"}
   #x_array = board.select do |cell|
     #cell == "X"
   #end
