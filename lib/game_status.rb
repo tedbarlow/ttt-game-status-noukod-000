@@ -41,3 +41,14 @@ end
 def over?(board)
   game_over = (won?(board)) || (full?(board)) || (draw?(board))
 end
+
+def winner?(board)
+  if (won?(board))
+    game_winner = nil
+    WIN_COMBINATIONS.each do |combinations|
+      if combinations.all?{|cell| board[cell] == "X"} || combinations.all?{|cell| board[cell] == "O"}
+        game_winner = board[cell]
+      end
+    end
+ return game_winner
+end
