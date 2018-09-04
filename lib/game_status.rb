@@ -32,21 +32,10 @@ end
 
 def full?(board)
   board_full = board.all?{|cell| cell == "X" || cell == "O"}
-  #x_array = board.select do |cell|
-    #cell == "X"
-  #end
-  #o_array = board.select do |cell|
-    #cell == "O"
-  #end
-  #((x_array + o_array) == 9)
 end
 
 def draw?(board)
- if (!won(board) && full(board))
-   return true
- else
-   return false
- end
+  board_draw = (!won?(board) && full?(board))
 end
 
 def over?(board)
