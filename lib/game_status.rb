@@ -42,7 +42,7 @@ def over?(board)
   game_over = (won?(board)) || (full?(board)) || (draw?(board))
 end
 
-def winner?(board)
+def winner(board)
   game_winner = nil
   if won?(board)
     WIN_COMBINATIONS.each do |combinations|
