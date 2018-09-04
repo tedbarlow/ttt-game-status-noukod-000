@@ -50,5 +50,6 @@ def winner?(board)
         game_winner = board[cell]
       end
     end
- return game_winner
+  end
+return game_winner
 end
