@@ -34,12 +34,12 @@ def full?(board)
   #if board.all?{|cell| cell == "X" || cell == "O"}
   #end
   x_array = board.select do |cell|
-    board[cell] == "X"
+    cell == "X"
   end
   o_array = board.select do |cell|
-    board[cell] == "O"
+    cell == "O"
   end
-  (x_array + o_array == 9)
+  ((x_array + o_array) == 9)
 end
 
 def draw?(board)
