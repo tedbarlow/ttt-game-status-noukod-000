@@ -38,7 +38,6 @@ def full?(board)
   o_array = board.select do |cell|
     cell == "O"
   end
-
   (x_array + o_array == 9)
 end
 
@@ -51,5 +50,5 @@ def draw?(board)
 end
 
 def over?(board)
-  (won?(board) || (full?(board)) || (draw?(board))
+  (won?(board)) || (full?(board)) || (draw?(board))
 end
